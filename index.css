@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background-color: #1b2635;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 5px 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#add-card {
+    color: black;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    margin-bottom: 29px;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 30PX;
+    cursor: pointer;
+    background: white;
+}
+
+#popup,
+#popup_two {
+    display: none;
+}
+
+#popup-form {
+    position: fixed;
+    left: 38%;
+    top: 150px;
+    width: 25%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background: #0f151d;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 1;
+}
+
+#popup-form label {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+}
+
+.form-control {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.form-control input {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+}
+
+#close-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    color: white;
+    position: relative;
+    left: 40%;
+}
+
+#save-button,
+#edit-button {
+    background-color: #1b2635;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#card {
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 11px;
+    padding-left: 8px;
+    padding-top: 40px;
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    position: relative;
+}
+
+span {
+    font-weight: 200;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+#popup-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.fa-edit {
+    margin-left: 285px;
+    cursor: pointer;
+}
+
+.fa-trash {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#busy,
+#working,
+#available,
+#Gym,
+#Waste {
+    color: white;
+    padding: 11px 13px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 29px;
+    font-size: 13px;
+    margin-top: 40px;
+    margin-left: 30PX;
+    cursor: pointer;
+    background: #1053ab;
+}
+
+#status,
+#profile,
+#edit-status,
+#edit-profile {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+}
+
+#clear {
+    color: white;
+    padding: 11px 13px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 29px;
+    font-size: 13px;
+    margin-top: 40px;
+    margin-left: 30PX;
+    cursor: pointer;
+    background: red;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+#usman-profile,
+#salman-profile,
+#mani-profile,
+#zain-profile,
+#shahid-profile {
+    color: white;
+    padding: 11px 13px;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 29px;
+    font-size: 13px;
+    cursor: pointer;
+    background: #1053ab;
+}
+
+.profiles {
+    margin-top: 32px;
+}
+
+.sidebar-two {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.close {
+    position: absolute;
+    right: 6%;
+    top: 1%;
+    cursor: pointer;
+}
+
+#lead-heading {
+    position: relative;
+    top: 160px;
+}
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+img {
+    cursor: pointer;
+    margin: 49px;
+}
+
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #284e95;
+}
+
+.box {
+    width: fit-content;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    opacity: 0;
+    left: -500px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.active_box {
+    opacity: 1;
+    left: 0px;
+    pointer-events: fill;
+    height: 100vh;
+    position: fixed;
+}
+
+.menu_icon_box {
+    z-index: 2;
+    width: fit-content;
+    height: auto;
+    margin: 30px;
+    position: absolute;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 40px;
+    height: 4px;
+    margin: 10px 8px;
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.active .line1 {
+    transform: translate(0px, 15px)rotate(45deg);
+}
+
+.active .line2 {
+    opacity: 0;
+}
+
+.active .line3 {
+    transform: translate(0px, -15px)rotate(-45deg);
+}
+
+nav {
+    padding-top: 100px;
+}
+
+nav ul {
+    margin: 0px 30px;
+}
+
+nav ul li {
+    list-style: none;
+    margin-bottom: 30px;
+    transition: 0.2s;
+}
+
+nav ul li:hover {
+    background-color: #c6c6c66f;
+    border-radius: 8px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.side {
+    width: 390px;
+}

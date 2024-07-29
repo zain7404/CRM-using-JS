@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="content-wrapper">
+        <div class="side">
+
+
+            <div class="menu_icon_box">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <div class="box">
+                <nav>
+                    <ul>
+                        <li id="usman-profile" class="profile"><a href="#">Usman</a></li>
+                        <li id="salman-profile" class="profile"><a href="#">Salman</a></li>
+                        <li id="mani-profile" class="profile"><a href="#">Mani</a></li>
+                        <li id="shahid-profile" class="profile"><a href="#">Shahid</a></li>
+                        <li id="zain-profile" class="profile"><a href="#">Zain</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+
+        <div class="content">
+            <button id="busy">
+                    Busy
+                </button>
+            <button id="available">
+                    Available
+                </button>
+            <button id="Gym">
+                    In the Gym
+                </button>
+            <button id="Waste">
+                    Waste
+                </button>
+            <button id="working">
+                    Working
+                </button>
+            <button id="clear">
+                    Clear Filter
+                </button>
+            <button id="add-card">
+                    +
+                </button>
+            <div class="card-container">
+
+            </div>
+
+            <div id="popup">
+                <form action id="popup-form">
+                    <button id="close-button">X</button>
+                    <h2 id="popup-heading">Enter the Details</h2>
+                    <div class="form-control">
+                        <label for="field" style="margin-right: 4px;">Name:
+                            </label>
+                        <input type="text" name="field" id="field" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="notes">Notes: </label>
+                        <input type="text" name="notes" id="notes" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="status">Status: </label>
+                        <select value name="status" id="status">
+                                <option value selected disabled>Option</option>
+                                <option value="Busy">Busy</option>
+                                <option value="Available">Available</option>
+                                <option value="In the Gym">In the Gym</option>
+                                <option value="Waste">Waste</option>
+                                <option value="Working">Working</option>
+                            </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="profile">Profile: </label>
+                        <select value name="profile" id="profile">
+                                <option value selected disabled>Option</option>
+                                <option value="Usman">Usman</option>
+                                <option value="Salman">Salman</option>
+                                <option value="Mani">Mani</option>
+                                <option value="Zain">Zain</option>
+                                <option value="Shahid">Shahid</option>
+                            </select>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="lead">Lead: </label>
+                        <input type="text" name="lead" id="lead" required>
+                    </div>
+                    <button id="save-button" type="submit">Save</button>
+
+                </form>
+            </div>
+            <div id="popup_two">
+                <form action id="popup-form">
+                    <button id="close-button">X</button>
+                    <h2 id="popup-heading">Enter the Details</h2>
+                    <div class="form-control">
+                        <label for="field" style="margin-right: 4px;">Name:
+                            </label>
+                        <input type="text" name="field" id="edit-field" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="notes">Notes: </label>
+                        <input type="text" name="notes" id="edit-notes" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="status">Status: </label>
+                        <select value name="status" id="edit-status">
+                                <option value selected disabled>Option</option>
+                                <option value="Busy">Busy</option>
+                                <option value="Available">Available</option>
+                                <option value="In the Gym">In the Gym</option>
+                                <option value="Waste">Waste</option>
+                                <option value="Working">Working</option>
+                            </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="profile">Profile: </label>
+                        <select value name="profile" id="edit-profile">
+                                <option value selected disabled>Option</option>
+                                <option value="Usman">Usman</option>
+                                <option value="Salman">Salman</option>
+                                <option value="Mani">Mani</option>
+                                <option value="Zain">Zain</option>
+                                <option value="Shahid">Shahid</option>
+                            </select>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="lead">Lead: </label>
+                        <input type="text" name="lead" id="edit-lead" required>
+                    </div>
+                    <button id="edit-button" type="submit">Save Changes</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="snackbar"></div>
+
+    </div>
+    <!-- The actual snackbar -->
+    <script src="index.js">
+    </script>
+
+</body>
+
+</html>
